@@ -15,11 +15,8 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#fff" }}>
         <nav className="navbar">
           <div className="navbar-container container">
-            <Link to="/" className="navbar-logo">
-              <GiRocketThruster
-                className="navbar-icon"
-                onClick={closeMobileMenu}
-              />
+            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+              <GiRocketThruster className="navbar-icon" />
               TestNav
             </Link>
             <div className="menu-icon" onClick={handleClick}>

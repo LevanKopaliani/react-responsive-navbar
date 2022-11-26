@@ -1,24 +1,39 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Contact from "./routes/Contact";
+import Navbar from "./components/Navbar";
+
+const AppLayout = () => {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  );
+};
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 

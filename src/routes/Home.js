@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./App.css";
-
-function App() {
+function Home() {
   return (
-    <>
-      <Link to="home">Home</Link>
+    <div>
+      <h1>HOME</h1>
+      <Link to="/">Home</Link>
       <Link to="about">About</Link>
       <Link to="contact">Contact</Link>
-    </>
+    </div>
   );
 }
 
-export default App;
+export default Home;

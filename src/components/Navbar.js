@@ -4,7 +4,6 @@ import { GiRocketThruster } from "react-icons/gi";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import "./Navbar.css";
-import { click } from "@testing-library/user-event/dist/click";
 
 function Navbar() {
   const [click, setClick] = useState(false);
